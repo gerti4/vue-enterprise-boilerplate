@@ -21,6 +21,10 @@ export default {
           name: 'logout',
           title: 'Log out',
         },
+        {
+          name: 'playground',
+          title: 'playground',
+        },
       ],
       loggedOutNavRoutes: [
         {
@@ -32,7 +36,7 @@ export default {
   },
   computed: {
     ...authComputed,
-  },
+  }
 }
 </script>
 

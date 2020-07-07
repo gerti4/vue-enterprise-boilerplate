@@ -20,7 +20,7 @@ const storeData = { modules: {} }
   )
 
   // For every Vuex module...
-  requireModule.keys().forEach((fileName) => {
+  requireModule.keys().forEach((fileName) => {    
     const moduleDefinition =
       requireModule(fileName).default || requireModule(fileName)
 

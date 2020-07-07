@@ -37,8 +37,11 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '@design';
+@import '@design'; 
 
+a{
+  color: $color-link-text; 
+}
 .active a {
   font-weight: 600;
   color: $color-link-text-active;

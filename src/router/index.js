@@ -4,8 +4,15 @@ import VueRouter from 'vue-router'
 import VueMeta from 'vue-meta'
 // Adds a loading bar at the top during page loads.
 import NProgress from 'nprogress/nprogress'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import store from '@state/store'
 import routes from './routes'
+
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+
 
 Vue.use(VueRouter)
 Vue.use(VueMeta, {

@@ -80,6 +80,23 @@ export default [
     },
   },
   {
+    path: '/playground',
+    name: 'playground',
+    component: () => lazyLoadView(import('@views/playgroundView.vue')),
+    meta: {
+      beforeResolve(routeTo, routeFrom, next) {
+        // Check if the user logged in
+        if (store.getters['auth/loggedIn']) {
+          // Continue to the playground page
+          next()
+        } else {
+          // Redirect to the login page
+          next({name: 'login'})
+        }
+      },
+    },
+  },
+  {
     path: '/404',
     name: '404',
     component: require('@views/_404.vue').default,
